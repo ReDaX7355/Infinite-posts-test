@@ -10,7 +10,6 @@ export const Posts = () => {
     isLoading,
     isFetching,
     error,
-    headers,
   } = useGetPostsQuery({
     page: page,
   });
@@ -21,7 +20,6 @@ export const Posts = () => {
         window.innerHeight + window.scrollY >= document.body.offsetHeight;
       if (scrolledToBottom && !isFetching) {
         setPage(page + 1);
-        console.log(headers);
       }
     };
 
